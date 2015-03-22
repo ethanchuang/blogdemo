@@ -27,8 +27,13 @@
         <td><%= post.category.try(:name) %></td>
         <td><%= image_tag post.picture.small %></td>
         <td><%= link_to 'Show', post, class:'btn btn-warning' %></td>
+
+        <% if can? :edit, post %>
+
         <td><%= link_to 'Edit', edit_post_path(post), class:'btn btn-info' %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger' %></td>
+
+        <% end %>
       </tr>
     <% end %>
   </tbody>

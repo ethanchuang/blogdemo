@@ -57,6 +57,10 @@ group :development, :test do
 
   gem 'better_errors'
 
+  gem 'rack-mini-profiler', require: false
+
+  gem 'cancancan'
+
 end
 
 group :production do 

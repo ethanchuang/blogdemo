@@ -56,6 +56,7 @@ GEM
     builder (3.2.2)
     byebug (4.0.2)
       columnize (= 0.9.0)
+    cancancan (1.10.1)
     carrierwave (0.10.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -109,6 +110,8 @@ GEM
     orm_adapter (0.5.0)
     pg (0.18.1)
     rack (1.6.0)
+    rack-mini-profiler (0.9.3)
+      rack (>= 1.1.3)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.0)
@@ -189,6 +192,7 @@ DEPENDENCIES
   bootstrap-kaminari-views
   bootstrap-sass
   byebug
+  cancancan
   carrierwave
   coffee-rails (~> 4.1.0)
   devise
@@ -197,6 +201,7 @@ DEPENDENCIES
   kaminari
   mini_magick
   pg
+  rack-mini-profiler
   rails (= 4.2.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

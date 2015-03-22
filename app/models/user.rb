@@ -4,6 +4,10 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 	has_many :posts
+
+	def is_admin?
+		role == 'admin'
+	end
  	# validates :name, presence: true, length: { minimum: 3, maximum: 20 }
  	# validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i }
  	# regular expression
