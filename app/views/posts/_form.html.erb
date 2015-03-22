@@ -1,0 +1,25 @@
+<%= simple_form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.input :title %>    
+    <%= f.input :content %>
+
+  <div class="field">
+    <%= f.label :publish_date %>
+    <%= f.date_select :publish_date %>
+  </div>
+    <%= f.association :user%>
+    <%= f.association :category%>   
+    <%= f.input :picture, as: :file %>
+    <%= f.submit %>
+<% end %>
